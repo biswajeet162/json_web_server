@@ -1,0 +1,42 @@
+{
+  "success": true,
+  "message": "Cart retrieved successfully",
+  "data": {
+    "cartId": "cart_12345",
+    "userId": 123,
+    "items": [
+      {
+        "id": 1,
+        "productId": 1,
+        "productName": "Wireless Headphones",
+        "productImage": "https://example.com/images/headphones.jpg",
+        "quantity": 2,
+        "unitPrice": 199.99,
+        "totalPrice": 399.98,
+        "currency": "USD"
+      },
+      {
+        "id": 2,
+        "productId": 3,
+        "productName": "Laptop Stand",
+        "productImage": "https://example.com/images/laptop-stand.jpg",
+        "quantity": 1,
+        "unitPrice": 49.99,
+        "totalPrice": 49.99,
+        "currency": "USD"
+      }
+    ],
+    "summary": {
+      "subtotal": 449.97,
+      "tax": 36.00,
+      "shipping": 9.99,
+      "discount": 0.00,
+      "total": 495.96,
+      "currency": "USD"
+    },
+    "itemCount": 3,
+    "lastUpdated": "2024-01-15T10:25:00Z"
+  },
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+

@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "message": "Product retrieved successfully",
+  "data": {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "Premium noise-cancelling wireless headphones with 30-hour battery life. Features active noise cancellation, premium sound quality, and comfortable over-ear design.",
+    "price": 199.99,
+    "currency": "USD",
+    "category": "Electronics",
+    "subcategory": "Audio",
+    "brand": "AudioTech",
+    "inStock": true,
+    "stockQuantity": 45,
+    "imageUrl": "https://example.com/images/headphones.jpg",
+    "images": [
+      "https://example.com/images/headphones-1.jpg",
+      "https://example.com/images/headphones-2.jpg",
+      "https://example.com/images/headphones-3.jpg"
+    ],
+    "rating": 4.5,
+    "reviewsCount": 234,
+    "specifications": {
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0",
+      "weight": "250g",
+      "color": "Black",
+      "warranty": "2 years"
+    },
+    "features": [
+      "Active Noise Cancellation",
+      "30-hour battery life",
+      "Quick charge (10 min = 3 hours)",
+      "Premium sound quality",
+      "Comfortable design"
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "userName": "John Doe",
+        "rating": 5,
+        "comment": "Excellent sound quality and very comfortable for long listening sessions.",
+        "date": "2024-01-10T08:15:00Z"
+      },
+      {
+        "id": 2,
+        "userName": "Jane Smith",
+        "rating": 4,
+        "comment": "Great headphones, but the price is a bit high.",
+        "date": "2024-01-08T14:22:00Z"
+      }
+    ]
+  },
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+

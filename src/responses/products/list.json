@@ -1,0 +1,81 @@
+{
+  "success": true,
+  "message": "Products retrieved successfully",
+  "data": {
+    "products": [
+      {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "description": "Premium noise-cancelling wireless headphones",
+        "price": 199.99,
+        "currency": "USD",
+        "category": "Electronics",
+        "inStock": true,
+        "stockQuantity": 45,
+        "imageUrl": "https://example.com/images/headphones.jpg",
+        "rating": 4.5,
+        "reviewsCount": 234
+      },
+      {
+        "id": 2,
+        "name": "Smart Watch",
+        "description": "Feature-rich smartwatch with health tracking",
+        "price": 299.99,
+        "currency": "USD",
+        "category": "Electronics",
+        "inStock": true,
+        "stockQuantity": 32,
+        "imageUrl": "https://example.com/images/smartwatch.jpg",
+        "rating": 4.7,
+        "reviewsCount": 189
+      },
+      {
+        "id": 3,
+        "name": "Laptop Stand",
+        "description": "Ergonomic aluminum laptop stand",
+        "price": 49.99,
+        "currency": "USD",
+        "category": "Accessories",
+        "inStock": true,
+        "stockQuantity": 78,
+        "imageUrl": "https://example.com/images/laptop-stand.jpg",
+        "rating": 4.3,
+        "reviewsCount": 156
+      },
+      {
+        "id": 4,
+        "name": "Mechanical Keyboard",
+        "description": "RGB backlit mechanical gaming keyboard",
+        "price": 129.99,
+        "currency": "USD",
+        "category": "Electronics",
+        "inStock": false,
+        "stockQuantity": 0,
+        "imageUrl": "https://example.com/images/keyboard.jpg",
+        "rating": 4.6,
+        "reviewsCount": 312
+      },
+      {
+        "id": 5,
+        "name": "USB-C Hub",
+        "description": "7-in-1 USB-C hub with HDMI and SD card reader",
+        "price": 39.99,
+        "currency": "USD",
+        "category": "Accessories",
+        "inStock": true,
+        "stockQuantity": 92,
+        "imageUrl": "https://example.com/images/usb-hub.jpg",
+        "rating": 4.4,
+        "reviewsCount": 278
+      }
+    ],
+    "pagination": {
+      "page": 1,
+      "pageSize": 10,
+      "totalItems": 5,
+      "totalPages": 1
+    }
+  },
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+
