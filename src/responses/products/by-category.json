@@ -1,6 +1,6 @@
 {
   "success": true,
-  "message": "Products retrieved successfully",
+  "message": "Products by category retrieved successfully",
   "data": [
     {
       "id": 1,
@@ -23,16 +23,6 @@
       "stockAvailable": true
     },
     {
-      "id": 3,
-      "name": "Laptop Stand",
-      "price": 499.00,
-      "mrp": 599.00,
-      "discountPercentage": 16.7,
-      "imageUrl": "https://example.com/images/laptop-stand.jpg",
-      "rating": 4.3,
-      "stockAvailable": true
-    },
-    {
       "id": 4,
       "name": "Mechanical Keyboard",
       "price": 1299.00,
@@ -41,36 +31,6 @@
       "imageUrl": "https://example.com/images/keyboard.jpg",
       "rating": 4.6,
       "stockAvailable": false
-    },
-    {
-      "id": 5,
-      "name": "USB-C Hub",
-      "price": 399.00,
-      "mrp": 499.00,
-      "discountPercentage": 20.0,
-      "imageUrl": "https://example.com/images/usb-hub.jpg",
-      "rating": 4.4,
-      "stockAvailable": true
-    },
-    {
-      "id": 6,
-      "name": "Wireless Mouse",
-      "price": 599.00,
-      "mrp": 799.00,
-      "discountPercentage": 25.0,
-      "imageUrl": "https://example.com/images/mouse.jpg",
-      "rating": 4.2,
-      "stockAvailable": true
-    },
-    {
-      "id": 7,
-      "name": "Monitor Stand",
-      "price": 899.00,
-      "mrp": 1099.00,
-      "discountPercentage": 18.2,
-      "imageUrl": "https://example.com/images/monitor-stand.jpg",
-      "rating": 4.1,
-      "stockAvailable": true
     },
     {
       "id": 8,
@@ -91,16 +51,7 @@
       "imageUrl": "https://example.com/images/speaker.jpg",
       "rating": 4.5,
       "stockAvailable": true
-    },
-    {
-      "id": 10,
-      "name": "Phone Stand",
-      "price": 299.00,
-      "mrp": 399.00,
-      "discountPercentage": 25.0,
-      "imageUrl": "https://example.com/images/phone-stand.jpg",
-      "rating": 4.0,
-      "stockAvailable": true
     }
   ]
 }
+

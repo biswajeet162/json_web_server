@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "message": "Orders fetched successfully",
+  "data": {
+    "content": [
+      {
+        "orderId": 9001,
+        "orderNumber": "ORD-2025-0001",
+        "orderStatus": "DELIVERED",
+        "placedAt": "2025-01-20T10:45:00",
+        "totalAmount": 478.00,
+        "totalItems": 3
+      },
+      {
+        "orderId": 9002,
+        "orderNumber": "ORD-2025-0002",
+        "orderStatus": "OUT_FOR_DELIVERY",
+        "placedAt": "2025-01-21T09:30:00",
+        "totalAmount": 1250.00,
+        "totalItems": 5
+      },
+      {
+        "orderId": 9003,
+        "orderNumber": "ORD-2025-0003",
+        "orderStatus": "SHIPPED",
+        "placedAt": "2025-01-22T11:15:00",
+        "totalAmount": 890.00,
+        "totalItems": 2
+      },
+      {
+        "orderId": 9004,
+        "orderNumber": "ORD-2025-0004",
+        "orderStatus": "PLACED",
+        "placedAt": "2025-01-23T14:20:00",
+        "totalAmount": 320.00,
+        "totalItems": 1
+      },
+      {
+        "orderId": 9005,
+        "orderNumber": "ORD-2025-0005",
+        "orderStatus": "CANCELLED",
+        "placedAt": "2025-01-19T16:45:00",
+        "totalAmount": 650.00,
+        "totalItems": 4
+      }
+    ],
+    "page": 0,
+    "size": 10,
+    "totalElements": 12,
+    "totalPages": 2
+  }
+}
+

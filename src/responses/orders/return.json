@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Return initiated successfully",
+  "data": {
+    "orderId": 9001,
+    "returnStatus": "REQUESTED"
+  }
+}
+

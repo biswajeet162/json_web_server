@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Category fetched successfully",
+  "data": {
+    "id": 10,
+    "name": "Grocery",
+    "slug": "grocery",
+    "imageUrl": "https://cdn.apnadukan.com/categories/grocery.png",
+    "parentId": 1,
+    "level": 2
+  }
+}
+

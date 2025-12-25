@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "message": "Invoice generated",
+  "data": {
+    "invoiceUrl": "https://cdn.apnadukan.com/invoices/ORD-2025-0001.pdf"
+  }
+}
+

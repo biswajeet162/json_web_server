@@ -1,6 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes/routes');
+const productRoutes = require('./routes/productRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 const path = require('path');
 
 const app = express();
@@ -13,6 +17,12 @@ app.use(express.json());
 
 // Register API routes
 app.use('/api', routes);
+
+// Register v1 API routes
+app.use('/api/v1/products', productRoutes);
+app.use('/api/v1/categories', categoryRoutes);
+app.use('/api/v1/cart', cartRoutes);
+app.use('/api/v1/orders', orderRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
@@ -27,4 +37,5 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
 

@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Cart validated successfully",
+  "data": {
+    "isValid": true,
+    "issues": []
+  }
+}
+

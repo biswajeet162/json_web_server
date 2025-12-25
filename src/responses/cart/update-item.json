@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Cart item updated",
+  "data": {
+    "cartItemId": 5,
+    "quantity": 3,
+    "subtotal": 84.00
+  }
+}
+

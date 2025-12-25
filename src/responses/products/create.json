@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Product created successfully",
+  "data": {
+    "id": 11,
+    "name": "New Product"
+  }
+}
+

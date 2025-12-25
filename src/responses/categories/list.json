@@ -1,0 +1,132 @@
+{
+  "success": true,
+  "message": "Categories fetched successfully",
+  "data": [
+    {
+      "id": 1,
+      "name": "FMCG",
+      "slug": "fmcg",
+      "imageUrl": "https://cdn.apnadukan.com/categories/fmcg.png",
+      "children": [
+        {
+          "id": 10,
+          "name": "Grocery",
+          "slug": "grocery",
+          "imageUrl": "https://cdn.apnadukan.com/categories/grocery.png",
+          "children": [
+            {
+              "id": 11,
+              "name": "Rice & Grains",
+              "slug": "rice-grains",
+              "imageUrl": "https://cdn.apnadukan.com/categories/rice.png",
+              "children": []
+            },
+            {
+              "id": 12,
+              "name": "Pulses & Lentils",
+              "slug": "pulses-lentils",
+              "imageUrl": "https://cdn.apnadukan.com/categories/pulses.png",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "Beverages",
+          "slug": "beverages",
+          "imageUrl": "https://cdn.apnadukan.com/categories/beverages.png",
+          "children": [
+            {
+              "id": 14,
+              "name": "Soft Drinks",
+              "slug": "soft-drinks",
+              "imageUrl": "https://cdn.apnadukan.com/categories/soft-drinks.png",
+              "children": []
+            },
+            {
+              "id": 15,
+              "name": "Juices",
+              "slug": "juices",
+              "imageUrl": "https://cdn.apnadukan.com/categories/juices.png",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Electronics",
+      "slug": "electronics",
+      "imageUrl": "https://cdn.apnadukan.com/categories/electronics.png",
+      "children": [
+        {
+          "id": 20,
+          "name": "Mobile Phones",
+          "slug": "mobile-phones",
+          "imageUrl": "https://cdn.apnadukan.com/categories/mobile.png",
+          "children": []
+        },
+        {
+          "id": 21,
+          "name": "Laptops",
+          "slug": "laptops",
+          "imageUrl": "https://cdn.apnadukan.com/categories/laptops.png",
+          "children": []
+        },
+        {
+          "id": 22,
+          "name": "Accessories",
+          "slug": "electronics-accessories",
+          "imageUrl": "https://cdn.apnadukan.com/categories/accessories.png",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Fashion",
+      "slug": "fashion",
+      "imageUrl": "https://cdn.apnadukan.com/categories/fashion.png",
+      "children": [
+        {
+          "id": 30,
+          "name": "Men's Clothing",
+          "slug": "mens-clothing",
+          "imageUrl": "https://cdn.apnadukan.com/categories/mens.png",
+          "children": []
+        },
+        {
+          "id": 31,
+          "name": "Women's Clothing",
+          "slug": "womens-clothing",
+          "imageUrl": "https://cdn.apnadukan.com/categories/womens.png",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Home & Kitchen",
+      "slug": "home-kitchen",
+      "imageUrl": "https://cdn.apnadukan.com/categories/home.png",
+      "children": [
+        {
+          "id": 40,
+          "name": "Cookware",
+          "slug": "cookware",
+          "imageUrl": "https://cdn.apnadukan.com/categories/cookware.png",
+          "children": []
+        },
+        {
+          "id": 41,
+          "name": "Storage",
+          "slug": "storage",
+          "imageUrl": "https://cdn.apnadukan.com/categories/storage.png",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
+

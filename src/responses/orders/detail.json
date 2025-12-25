@@ -1,45 +1,52 @@
 {
   "success": true,
-  "message": "Cart fetched successfully",
+  "message": "Order details fetched",
   "data": {
-    "cartId": 5001,
-    "totalItems": 3,
-    "totalPrice": 438.00,
-    "totalMrp": 480.00,
-    "totalDiscount": 42.00,
+    "orderId": 9001,
+    "orderNumber": "ORD-2025-0001",
+    "orderStatus": "DELIVERED",
+    "paymentStatus": "PAID",
+    "placedAt": "2025-01-20T10:45:00",
+    "deliveredAt": "2025-01-22T14:30:00",
+    "deliveryAddress": {
+      "name": "Biswajeet",
+      "phone": "9999999999",
+      "addressLine": "Bhubaneswar, Odisha",
+      "pincode": "751001"
+    },
+    "priceDetails": {
+      "totalMrp": 480.00,
+      "discount": 42.00,
+      "deliveryCharge": 40.00,
+      "payableAmount": 478.00
+    },
     "items": [
       {
-        "cartItemId": 1,
         "productId": 101,
         "productName": "Tata Salt 1kg",
         "imageUrl": "https://cdn.apnadukan.com/products/tata-salt.png",
         "price": 28.00,
         "mrp": 30.00,
         "quantity": 2,
-        "subtotal": 56.00,
-        "inStock": true
+        "subtotal": 56.00
       },
       {
-        "cartItemId": 2,
         "productId": 102,
         "productName": "Fortune Sunflower Oil 1L",
         "imageUrl": "https://cdn.apnadukan.com/products/sunflower-oil.png",
         "price": 185.00,
         "mrp": 200.00,
         "quantity": 1,
-        "subtotal": 185.00,
-        "inStock": true
+        "subtotal": 185.00
       },
       {
-        "cartItemId": 3,
         "productId": 103,
         "productName": "Basmati Rice 5kg",
         "imageUrl": "https://cdn.apnadukan.com/products/basmati-rice.png",
         "price": 197.00,
         "mrp": 250.00,
         "quantity": 1,
-        "subtotal": 197.00,
-        "inStock": true
+        "subtotal": 197.00
       }
     ]
   }

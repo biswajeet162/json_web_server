@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Category created successfully",
+  "data": {
+    "id": 20,
+    "name": "Beverages"
+  }
+}
+

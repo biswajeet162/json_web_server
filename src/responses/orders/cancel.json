@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Order cancelled successfully",
+  "data": {
+    "orderId": 9001,
+    "orderStatus": "CANCELLED"
+  }
+}
+

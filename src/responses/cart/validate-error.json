@@ -1,0 +1,14 @@
+{
+  "success": false,
+  "message": "Cart validation failed",
+  "data": {
+    "isValid": false,
+    "issues": [
+      {
+        "productId": 101,
+        "issue": "OUT_OF_STOCK"
+      }
+    ]
+  }
+}
+

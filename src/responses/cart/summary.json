@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "message": "Cart summary fetched",
+  "data": {
+    "totalItems": 3,
+    "totalMrp": 480.00,
+    "totalDiscount": 42.00,
+    "deliveryCharge": 40.00,
+    "payableAmount": 478.00
+  }
+}
+

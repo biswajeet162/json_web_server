@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "message": "Filtered products retrieved successfully",
+  "data": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 1999.00,
+      "mrp": 2499.00,
+      "discountPercentage": 20.0,
+      "imageUrl": "https://example.com/images/headphones.jpg",
+      "rating": 4.5,
+      "stockAvailable": true
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "price": 2999.00,
+      "mrp": 3499.00,
+      "discountPercentage": 14.3,
+      "imageUrl": "https://example.com/images/smartwatch.jpg",
+      "rating": 4.7,
+      "stockAvailable": true
+    },
+    {
+      "id": 8,
+      "name": "Webcam HD",
+      "price": 1499.00,
+      "mrp": 1999.00,
+      "discountPercentage": 25.0,
+      "imageUrl": "https://example.com/images/webcam.jpg",
+      "rating": 4.8,
+      "stockAvailable": true
+    },
+    {
+      "id": 9,
+      "name": "Bluetooth Speaker",
+      "price": 1799.00,
+      "mrp": 2299.00,
+      "discountPercentage": 21.7,
+      "imageUrl": "https://example.com/images/speaker.jpg",
+      "rating": 4.5,
+      "stockAvailable": true
+    }
+  ]
+}
+

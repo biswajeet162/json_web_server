@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Order status fetched",
+  "data": {
+    "orderId": 9001,
+    "orderStatus": "OUT_FOR_DELIVERY"
+  }
+}
+

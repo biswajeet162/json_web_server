@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Item added to cart",
+  "data": {
+    "cartItemId": 5,
+    "productId": 101,
+    "quantity": 2
+  }
+}
+

@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "message": "Order placed successfully",
+  "data": {
+    "orderId": 9001,
+    "orderNumber": "ORD-2025-0001",
+    "orderStatus": "PLACED",
+    "payableAmount": 478.00,
+    "paymentStatus": "PENDING"
+  }
+}
+

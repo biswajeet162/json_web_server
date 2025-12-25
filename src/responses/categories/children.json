@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "message": "Child categories fetched",
+  "data": [
+    {
+      "id": 11,
+      "name": "Rice & Grains",
+      "slug": "rice-grains",
+      "imageUrl": "https://cdn.apnadukan.com/categories/rice.png"
+    },
+    {
+      "id": 12,
+      "name": "Pulses & Lentils",
+      "slug": "pulses-lentils",
+      "imageUrl": "https://cdn.apnadukan.com/categories/pulses.png"
+    },
+    {
+      "id": 16,
+      "name": "Spices & Masalas",
+      "slug": "spices-masalas",
+      "imageUrl": "https://cdn.apnadukan.com/categories/spices.png"
+    },
+    {
+      "id": 17,
+      "name": "Oil & Ghee",
+      "slug": "oil-ghee",
+      "imageUrl": "https://cdn.apnadukan.com/categories/oil.png"
+    }
+  ]
+}
+

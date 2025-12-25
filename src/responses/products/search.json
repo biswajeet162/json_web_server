@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "message": "Products found successfully",
+  "data": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 1999.00,
+      "mrp": 2499.00,
+      "discountPercentage": 20.0,
+      "imageUrl": "https://example.com/images/headphones.jpg",
+      "rating": 4.5,
+      "stockAvailable": true
+    },
+    {
+      "id": 6,
+      "name": "Wireless Mouse",
+      "price": 599.00,
+      "mrp": 799.00,
+      "discountPercentage": 25.0,
+      "imageUrl": "https://example.com/images/mouse.jpg",
+      "rating": 4.2,
+      "stockAvailable": true
+    },
+    {
+      "id": 9,
+      "name": "Bluetooth Speaker",
+      "price": 1799.00,
+      "mrp": 2299.00,
+      "discountPercentage": 21.7,
+      "imageUrl": "https://example.com/images/speaker.jpg",
+      "rating": 4.5,
+      "stockAvailable": true
+    }
+  ]
+}
+
