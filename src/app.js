@@ -24,8 +24,13 @@ const swaggerDocument = YAML.load(path.join(__dirname, '..', 'swagger.yaml'));
 
 const app = express();
 
-// Enable CORS for all origins (browser apps and Flutter apps)
-app.use(cors());
+// Enable CORS for all origins, methods, and headers
+app.use(cors({
+  origin: '*',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
 
 // Parse JSON request bodies
 app.use(express.json());
