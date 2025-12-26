@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "message": "Order funnel fetched",
+    "data": {
+        "cartCreated": 5000,
+        "checkoutStarted": 3200,
+        "paymentInitiated": 2800,
+        "ordersPlaced": 2500,
+        "ordersDelivered": 2350,
+        "dropOffRates": {
+            "cartToCheckout": 36.0,
+            "checkoutToPayment": 12.5,
+            "paymentToOrder": 10.7
+        }
+    }
+}

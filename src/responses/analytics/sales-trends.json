@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "message": "Sales trend fetched",
+    "data": [
+        {
+            "period": "2025-01-20",
+            "orders": 45,
+            "revenue": 45678.00
+        },
+        {
+            "period": "2025-01-21",
+            "orders": 52,
+            "revenue": 51234.00
+        }
+    ]
+}

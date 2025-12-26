@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Experiment results fetched",
+    "data": [
+        {
+            "experimentName": "Free Delivery Banner",
+            "conversionLift": 6.5,
+            "status": "WINNER"
+        }
+    ]
+}

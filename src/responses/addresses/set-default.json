@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Default address updated",
+    "data": {
+        "addressId": 2002,
+        "isDefault": true
+    }
+}

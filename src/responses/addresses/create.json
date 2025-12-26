@@ -1,0 +1,7 @@
+{
+    "success": true,
+    "message": "Address added successfully",
+    "data": {
+        "addressId": 2002
+    }
+}

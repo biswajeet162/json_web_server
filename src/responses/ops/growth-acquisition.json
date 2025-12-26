@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "User acquisition fetched",
+    "data": {
+        "newUsersToday": 120,
+        "newUsersThisMonth": 3200,
+        "costPerAcquisition": 42.50
+    }
+}

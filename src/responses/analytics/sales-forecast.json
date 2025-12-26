@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Sales forecast fetched",
+    "data": {
+        "next30DaysForecast": 1650000.00,
+        "confidenceLevel": 0.72
+    }
+}

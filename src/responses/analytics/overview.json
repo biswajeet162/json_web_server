@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Business overview fetched",
+    "data": {
+        "gmv": 1254320.75,
+        "netRevenue": 1043210.50,
+        "totalOrders": 1250,
+        "averageOrderValue": 1003.45,
+        "conversionRate": 2.8,
+        "repeatCustomerRate": 38.5
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Inventory alerts fetched",
+    "data": [
+        {
+            "productId": 102,
+            "productName": "Fortune Oil",
+            "availableStock": 5,
+            "threshold": 10
+        }
+    ]
+}

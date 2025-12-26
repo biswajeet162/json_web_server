@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "message": "Revenue data fetched",
+    "data": [
+        {
+            "date": "2025-01-20",
+            "revenue": 45678.00
+        },
+        {
+            "date": "2025-01-21",
+            "revenue": 51234.00
+        }
+    ]
+}

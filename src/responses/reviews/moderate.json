@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Review moderated successfully",
+    "data": {
+        "reviewId": 6001,
+        "status": "APPROVED"
+    }
+}

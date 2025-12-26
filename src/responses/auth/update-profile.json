@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Profile updated successfully",
+    "data": {
+        "userId": 1001,
+        "name": "Biswajeet Nayak",
+        "email": "biswajeet.n@gmail.com"
+    }
+}

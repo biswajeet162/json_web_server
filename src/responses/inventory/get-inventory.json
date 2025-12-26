@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Inventory fetched successfully",
+    "data": {
+        "productId": 101,
+        "availableStock": 120,
+        "reservedStock": 10,
+        "inStock": true,
+        "lowStock": false
+    }
+}

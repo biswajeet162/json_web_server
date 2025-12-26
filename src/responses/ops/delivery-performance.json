@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Delivery performance fetched",
+    "data": {
+        "avgDeliveryTimeDays": 2.3,
+        "onTimeDeliveryRate": 91.5,
+        "lateDeliveries": 85
+    }
+}

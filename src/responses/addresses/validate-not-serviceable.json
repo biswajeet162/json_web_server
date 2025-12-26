@@ -1,0 +1,8 @@
+{
+    "success": false,
+    "message": "Delivery not available at this location",
+    "data": {
+        "pincode": "999999",
+        "isServiceable": false
+    }
+}

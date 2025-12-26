@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Login successful",
+    "data": {
+        "userId": 1001,
+        "isNewUser": false,
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+        "expiresIn": 3600
+    }
+}

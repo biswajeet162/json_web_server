@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "OTP verified, new user",
+    "data": {
+        "userId": 1020,
+        "isNewUser": true,
+        "accessToken": "jwt-access-token",
+        "refreshToken": "jwt-refresh-token",
+        "expiresIn": 3600
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Users fetched",
+    "data": [
+        {
+            "userId": 1001,
+            "name": "Biswajeet",
+            "mobile": "9999999999",
+            "status": "ACTIVE",
+            "joinedAt": "2024-10-01"
+        }
+    ]
+}

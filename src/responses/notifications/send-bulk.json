@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Bulk notification triggered",
+    "data": {
+        "batchId": "BULK-9001",
+        "status": "PROCESSING"
+    }
+}

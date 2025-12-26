@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Retention analysis fetched",
+    "data": {
+        "day7Retention": 42.0,
+        "day30Retention": 28.5
+    }
+}

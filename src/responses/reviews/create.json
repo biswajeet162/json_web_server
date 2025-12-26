@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Review submitted successfully",
+    "data": {
+        "reviewId": 5001,
+        "status": "PUBLISHED"
+    }
+}

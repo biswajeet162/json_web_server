@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "message": "Order operations analytics fetched",
+    "data": {
+        "avgOrderProcessingTimeHours": 6.5,
+        "avgDeliveryTimeDays": 2.3,
+        "cancelRate": 4.2,
+        "returnRate": 3.1
+    }
+}

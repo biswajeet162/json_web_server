@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "message": "User reviews fetched",
+    "data": [
+        {
+            "reviewId": 5001,
+            "productId": 101,
+            "productName": "Tata Salt",
+            "rating": 5,
+            "status": "PUBLISHED",
+            "createdAt": "2025-01-25T12:30:00"
+        }
+    ]
+}

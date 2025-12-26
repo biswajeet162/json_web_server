@@ -1,0 +1,7 @@
+{
+    "success": true,
+    "message": "Coupon removed successfully",
+    "data": {
+        "payableAmount": 478.00
+    }
+}

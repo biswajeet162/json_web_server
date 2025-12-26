@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Coupon applied successfully",
+    "data": {
+        "couponCode": "SAVE50",
+        "discountType": "FLAT",
+        "discountValue": 50.00,
+        "maxDiscount": 100.00,
+        "discountApplied": 50.00,
+        "newPayableAmount": 428.00
+    }
+}

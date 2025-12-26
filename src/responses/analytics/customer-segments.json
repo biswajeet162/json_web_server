@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "message": "Customer segments fetched",
+    "data": {
+        "newCustomers": 420,
+        "repeatCustomers": 780,
+        "churnRiskCustomers": 110,
+        "highValueCustomers": 95
+    }
+}

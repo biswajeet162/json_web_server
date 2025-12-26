@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "User profile fetched",
+    "data": {
+        "userId": 1001,
+        "name": "Biswajeet",
+        "mobileNumber": "9999999999",
+        "email": "biswajeet@gmail.com",
+        "role": "CUSTOMER"
+    }
+}

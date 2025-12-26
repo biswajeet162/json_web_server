@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Coupons fetched",
+    "data": [
+        {
+            "couponCode": "SAVE50",
+            "usedCount": 150,
+            "revenueGenerated": 65000.00,
+            "active": true
+        }
+    ]
+}

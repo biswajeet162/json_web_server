@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Inventory updated successfully",
+    "data": {
+        "productId": 101,
+        "availableStock": 200
+    }
+}

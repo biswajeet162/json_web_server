@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "message": "Order cancellation analysis fetched",
+    "data": [
+        {
+            "reason": "PAYMENT_FAILED",
+            "count": 120
+        },
+        {
+            "reason": "OUT_OF_STOCK",
+            "count": 65
+        }
+    ]
+}

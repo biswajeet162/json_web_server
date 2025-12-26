@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Order status updated",
+    "data": {
+        "orderId": 9001,
+        "orderStatus": "SHIPPED"
+    }
+}

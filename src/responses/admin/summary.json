@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Dashboard summary fetched",
+    "data": {
+        "totalOrders": 1250,
+        "totalRevenue": 875432.50,
+        "totalUsers": 3200,
+        "activeProducts": 540,
+        "pendingOrders": 32
+    }
+}

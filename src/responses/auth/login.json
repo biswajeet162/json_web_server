@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "OTP sent successfully",
+    "data": {
+        "otpRefId": "OTP-REF-123456",
+        "expiresInSeconds": 300
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Customer LTV fetched",
+    "data": {
+        "averageLtv": 4250.75,
+        "highValueCustomerThreshold": 8000.00
+    }
+}

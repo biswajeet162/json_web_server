@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Notification marked as read",
+    "data": {
+        "notificationId": "PUSH-30001",
+        "read": true
+    }
+}

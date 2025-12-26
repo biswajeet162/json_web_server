@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Top products fetched",
+    "data": [
+        {
+            "productId": 101,
+            "productName": "Tata Salt",
+            "unitsSold": 1200,
+            "revenue": 33600.00
+        }
+    ]
+}

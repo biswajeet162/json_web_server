@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Inventory aging fetched",
+    "data": [
+        {
+            "productId": 205,
+            "productName": "Old Brand Biscuit",
+            "daysInStock": 120,
+            "stockValue": 45000.00
+        }
+    ]
+}

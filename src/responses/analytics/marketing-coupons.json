@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Coupon analytics fetched",
+    "data": [
+        {
+            "couponCode": "SAVE50",
+            "redemptions": 150,
+            "revenueGenerated": 65000.00,
+            "roi": 3.5
+        }
+    ]
+}

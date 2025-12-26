@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "message": "Coupon fetched successfully",
+    "data": {
+        "couponCode": "SAVE50",
+        "discountType": "FLAT",
+        "discountValue": 50.00,
+        "maxDiscount": 100.00,
+        "minOrderValue": 399.00,
+        "usageLimit": 1000,
+        "usedCount": 150,
+        "active": true
+    }
+}

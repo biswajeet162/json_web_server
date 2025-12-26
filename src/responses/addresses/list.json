@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "message": "Addresses fetched successfully",
+    "data": [
+        {
+            "addressId": 2001,
+            "name": "Biswajeet",
+            "phone": "9999999999",
+            "addressLine1": "Plot 12, Jaydev Vihar",
+            "addressLine2": "Near Airport",
+            "city": "Bhubaneswar",
+            "state": "Odisha",
+            "pincode": "751001",
+            "addressType": "HOME",
+            "isDefault": true
+        }
+    ]
+}

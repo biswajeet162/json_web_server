@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Push notification sent",
+    "data": {
+        "notificationId": "PUSH-30001",
+        "status": "SENT"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "message": "Growth recommendations fetched",
+    "data": [
+        {
+            "type": "PRICE_OPTIMIZATION",
+            "message": "Reduce price of low-performing products by 5–10%"
+        },
+        {
+            "type": "RETENTION",
+            "message": "Offer coupons to churn-risk customers"
+        }
+    ]
+}

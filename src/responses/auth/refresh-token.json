@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Access token refreshed",
+    "data": {
+        "accessToken": "new-jwt-access-token",
+        "expiresIn": 3600
+    }
+}

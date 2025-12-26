@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Pending reviews fetched",
+    "data": [
+        {
+            "reviewId": 6001,
+            "productId": 102,
+            "rating": 2,
+            "comment": "Damaged product",
+            "status": "PENDING"
+        }
+    ]
+}

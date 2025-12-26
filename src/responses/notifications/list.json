@@ -1,0 +1,20 @@
+{
+    "success": true,
+    "message": "Notifications fetched",
+    "data": {
+        "content": [
+            {
+                "notificationId": "PUSH-30001",
+                "type": "PUSH",
+                "title": "Order Delivered",
+                "message": "Your order ORD-2025-0001 has been delivered",
+                "status": "SENT",
+                "createdAt": "2025-01-22T18:30:00"
+            }
+        ],
+        "page": 0,
+        "size": 10,
+        "totalElements": 8,
+        "totalPages": 1
+    }
+}

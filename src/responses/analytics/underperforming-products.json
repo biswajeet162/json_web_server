@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "message": "Underperforming products fetched",
+    "data": [
+        {
+            "productId": 205,
+            "productName": "Old Brand Biscuit",
+            "unitsSold": 5,
+            "daysInInventory": 90
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Delivery available",
+    "data": {
+        "pincode": "751001",
+        "isServiceable": true,
+        "estimatedDeliveryDays": 2
+    }
+}

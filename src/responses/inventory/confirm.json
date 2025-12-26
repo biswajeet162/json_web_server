@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Stock confirmed and deducted",
+    "data": {
+        "orderId": 9001,
+        "reservationStatus": "CONFIRMED"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "message": "Reviews fetched",
+    "data": {
+        "summary": {
+            "averageRating": 4.4,
+            "totalReviews": 245,
+            "ratingDistribution": {
+                "5": 150,
+                "4": 60,
+                "3": 20,
+                "2": 10,
+                "1": 5
+            }
+        },
+        "reviews": [
+            {
+                "reviewId": 5001,
+                "userName": "Biswajeet",
+                "rating": 5,
+                "title": "Excellent",
+                "comment": "Very good quality and fast delivery",
+                "verifiedPurchase": true,
+                "createdAt": "2025-01-25T12:30:00"
+            }
+        ]
+    }
+}

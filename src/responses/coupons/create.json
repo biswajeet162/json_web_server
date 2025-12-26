@@ -1,0 +1,7 @@
+{
+    "success": true,
+    "message": "Coupon created successfully",
+    "data": {
+        "couponCode": "WELCOME100"
+    }
+}

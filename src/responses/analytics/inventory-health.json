@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Inventory health fetched",
+    "data": {
+        "stockTurnoverRatio": 5.2,
+        "deadStockValue": 125000.00,
+        "lowStockProducts": 18
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Stock reserved successfully",
+    "data": {
+        "orderId": 9001,
+        "reservationStatus": "RESERVED"
+    }
+}

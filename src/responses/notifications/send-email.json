@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Email sent successfully",
+    "data": {
+        "notificationId": "EMAIL-20001",
+        "status": "SENT"
+    }
+}

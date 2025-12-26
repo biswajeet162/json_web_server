@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "SMS sent successfully",
+    "data": {
+        "notificationId": "SMS-10001",
+        "status": "SENT"
+    }
+}

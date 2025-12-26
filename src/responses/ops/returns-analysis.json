@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Return analysis fetched",
+    "data": {
+        "returnRate": 3.1,
+        "topReturnReasons": [
+            {
+                "reason": "DAMAGED_PRODUCT",
+                "count": 45
+            }
+        ]
+    }
+}

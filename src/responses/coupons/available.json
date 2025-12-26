@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Available coupons fetched",
+    "data": [
+        {
+            "couponCode": "SAVE50",
+            "title": "Flat ₹50 Off",
+            "description": "On minimum order of ₹399",
+            "expiryDate": "2025-12-31",
+            "discountType": "FLAT"
+        }
+    ]
+}

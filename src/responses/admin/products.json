@@ -1,0 +1,13 @@
+{
+    "success": true,
+    "message": "Products fetched",
+    "data": [
+        {
+            "productId": 101,
+            "productName": "Tata Salt",
+            "price": 28.00,
+            "stock": 120,
+            "active": true
+        }
+    ]
+}

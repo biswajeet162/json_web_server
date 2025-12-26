@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Customer retention fetched",
+    "data": {
+        "retentionRate": 61.5,
+        "churnRate": 38.5
+    }
+}

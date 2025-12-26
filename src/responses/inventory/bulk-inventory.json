@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "message": "Inventory fetched",
+    "data": [
+        {
+            "productId": 101,
+            "availableStock": 120,
+            "inStock": true
+        },
+        {
+            "productId": 102,
+            "availableStock": 0,
+            "inStock": false
+        }
+    ]
+}
