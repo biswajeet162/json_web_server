@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "message": "Cash on Delivery selected",
+    "data": {
+        "paymentId": 7002,
+        "orderId": 9001,
+        "paymentMethod": "COD",
+        "paymentStatus": "PENDING"
+    }
+}

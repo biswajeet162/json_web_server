@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "message": "Payment initiated",
+    "data": {
+        "paymentId": 7001,
+        "orderId": 9001,
+        "paymentMethod": "ONLINE",
+        "paymentGateway": "RAZORPAY",
+        "amount": 478.00,
+        "currency": "INR",
+        "gatewayOrderId": "rzp_order_ABC123",
+        "callbackUrl": "https://api.apnadukan.com/api/v1/payments/verify"
+    }
+}

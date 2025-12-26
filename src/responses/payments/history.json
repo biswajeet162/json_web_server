@@ -1,0 +1,20 @@
+{
+    "success": true,
+    "message": "Payment history fetched",
+    "data": {
+        "content": [
+            {
+                "paymentId": 7001,
+                "orderId": 9001,
+                "paymentMethod": "ONLINE",
+                "paymentStatus": "PAID",
+                "amount": 478.00,
+                "paidAt": "2025-01-20T10:47:00"
+            }
+        ],
+        "page": 0,
+        "size": 10,
+        "totalElements": 5,
+        "totalPages": 1
+    }
+}

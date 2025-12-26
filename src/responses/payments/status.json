@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "message": "Payment status fetched",
+    "data": {
+        "paymentId": 7001,
+        "orderId": 9001,
+        "paymentMethod": "ONLINE",
+        "paymentStatus": "PAID",
+        "amount": 478.00
+    }
+}

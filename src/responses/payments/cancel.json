@@ -1,0 +1,8 @@
+{
+    "success": true,
+    "message": "Payment cancelled",
+    "data": {
+        "orderId": 9001,
+        "paymentStatus": "CANCELLED"
+    }
+}

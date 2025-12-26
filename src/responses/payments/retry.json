@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Payment retry initiated",
+    "data": {
+        "paymentId": 7003,
+        "gatewayOrderId": "rzp_order_RETRY123",
+        "amount": 478.00
+    }
+}

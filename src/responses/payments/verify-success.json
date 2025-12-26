@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "message": "Payment verified successfully",
+    "data": {
+        "paymentId": 7001,
+        "orderId": 9001,
+        "paymentStatus": "PAID"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "success": false,
+    "message": "Payment verification failed",
+    "data": {
+        "paymentId": 7001,
+        "paymentStatus": "FAILED"
+    }
+}
