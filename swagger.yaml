@@ -1,0 +1,1186 @@
+openapi: 3.0.0
+info:
+  title: Apna Dukan E-Commerce API
+  description: Mock API server for Apna Dukan e-commerce application
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@apnadukan.com
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+
+tags:
+  - name: Products
+    description: Product catalog management
+  - name: Categories
+    description: Category hierarchy
+  - name: Cart
+    description: Shopping cart management
+  - name: Orders
+    description: Order placement and history
+  - name: Payment
+    description: Payment processing and management
+  - name: Auth
+    description: Authentication and authorization
+  - name: Inventory
+    description: Inventory management
+  - name: Address
+    description: Delivery address management
+  - name: Notification
+    description: Notifications (SMS, Email, Push)
+  - name: Coupon
+    description: Coupon and discount management
+  - name: Review
+    description: Product reviews and ratings
+  - name: Admin
+    description: Admin dashboard operations
+  - name: Analytics
+    description: Business analytics and insights
+  - name: Operations
+    description: Operations and growth metrics
+
+paths:
+  # Products APIs
+  /api/v1/products:
+    get:
+      tags: [Products]
+      summary: Fetch all products with pagination and sorting
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: size
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: sort
+          in: query
+          schema:
+            type: string
+            default: "createdAt,desc"
+      responses:
+        '200':
+          description: Products list fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    post:
+      tags: [Products]
+      summary: Create a new product (Admin)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Product created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/products/search:
+    get:
+      tags: [Products]
+      summary: Search products by keyword
+      parameters:
+        - name: keyword
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Search results fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/products/filter:
+    get:
+      tags: [Products]
+      summary: Filter products by price and rating
+      parameters:
+        - name: minPrice
+          in: query
+          schema:
+            type: number
+        - name: maxPrice
+          in: query
+          schema:
+            type: number
+        - name: minRating
+          in: query
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Filtered products fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/products/category/{categoryId}:
+    get:
+      tags: [Products]
+      summary: Fetch products by category
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Category products fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/products/{productId}:
+    get:
+      tags: [Products]
+      summary: Fetch product details by ID
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Product details fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    put:
+      tags: [Products]
+      summary: Update product (Admin)
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Product updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    delete:
+      tags: [Products]
+      summary: Delete product (Admin)
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Product deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Categories APIs
+  /api/v1/categories:
+    get:
+      tags: [Categories]
+      summary: Fetch all categories in a tree
+      responses:
+        '200':
+          description: Categories fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    post:
+      tags: [Categories]
+      summary: Create a new category (Admin)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Category created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/categories/slug/{slug}:
+    get:
+      tags: [Categories]
+      summary: Fetch category by slug
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Category fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/categories/{categoryId}/children:
+    get:
+      tags: [Categories]
+      summary: Fetch child categories
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Child categories fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/categories/{categoryId}:
+    get:
+      tags: [Categories]
+      summary: Fetch category details by ID
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Category details fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    put:
+      tags: [Categories]
+      summary: Update category (Admin)
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Category updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    delete:
+      tags: [Categories]
+      summary: Delete category (Admin)
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Category deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Cart APIs
+  /api/v1/cart:
+    get:
+      tags: [Cart]
+      summary: Fetch current user's cart
+      responses:
+        '200':
+          description: Cart fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/cart/summary:
+    get:
+      tags: [Cart]
+      summary: Fetch cart price summary
+      responses:
+        '200':
+          description: Cart summary fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/cart/items:
+    post:
+      tags: [Cart]
+      summary: Add a product to cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: integer
+                quantity:
+                  type: integer
+      responses:
+        '201':
+          description: Item added to cart
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/cart/items/{cartItemId}:
+    put:
+      tags: [Cart]
+      summary: Update quantity of a cart item
+      parameters:
+        - name: cartItemId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                quantity:
+                  type: integer
+      responses:
+        '200':
+          description: Cart item updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    delete:
+      tags: [Cart]
+      summary: Remove an item from cart
+      parameters:
+        - name: cartItemId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Item removed from cart
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/cart/validate:
+    post:
+      tags: [Cart]
+      summary: Validate cart before checkout
+      responses:
+        '200':
+          description: Cart validated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/cart/clear:
+    delete:
+      tags: [Cart]
+      summary: Clear entire cart
+      responses:
+        '200':
+          description: Cart cleared
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Orders APIs
+  /api/v1/orders:
+    get:
+      tags: [Orders]
+      summary: Fetch user's order history
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: size
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Orders fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    post:
+      tags: [Orders]
+      summary: Place a new order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addressId:
+                  type: integer
+                paymentMethod:
+                  type: string
+                  enum: [COD, ONLINE]
+      responses:
+        '201':
+          description: Order placed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/orders/{orderId}/status:
+    get:
+      tags: [Orders]
+      summary: Fetch order status
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Order status fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/orders/{orderId}/invoice:
+    get:
+      tags: [Orders]
+      summary: Download order invoice
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Invoice details fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/orders/{orderId}/cancel:
+    post:
+      tags: [Orders]
+      summary: Cancel order
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Order cancelled
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/orders/{orderId}/return:
+    post:
+      tags: [Orders]
+      summary: Return order
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reason:
+                  type: string
+      responses:
+        '200':
+          description: Return initiated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/orders/{orderId}:
+    get:
+      tags: [Orders]
+      summary: Fetch order details
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Order details fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Payment APIs
+  /api/v1/payments/initiate:
+    post:
+      tags: [Payment]
+      summary: Initiate payment for an order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                orderId:
+                  type: integer
+                paymentMethod:
+                  type: string
+                  enum: [ONLINE, COD]
+      responses:
+        '200':
+          description: Payment initiated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/payments/verify:
+    post:
+      tags: [Payment]
+      summary: Verify online payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                paymentId:
+                  type: integer
+                gatewayPaymentId:
+                  type: string
+                gatewaySignature:
+                  type: string
+      responses:
+        '200':
+          description: Payment verified
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/payments/{orderId}:
+    get:
+      tags: [Payment]
+      summary: Get payment status by order ID
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Payment status fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/payments/{orderId}/retry:
+    post:
+      tags: [Payment]
+      summary: Retry failed payment
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Payment retry initiated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/payments/{orderId}/cancel:
+    post:
+      tags: [Payment]
+      summary: Cancel payment
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Payment cancelled
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/payments/history:
+    get:
+      tags: [Payment]
+      summary: Get payment history
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 0
+        - name: size
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        '200':
+          description: Payment history fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Auth APIs
+  /api/v1/auth/login:
+    post:
+      tags: [Auth]
+      summary: Login with mobile number
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mobileNumber:
+                  type: string
+                  example: "9999999999"
+      responses:
+        '200':
+          description: OTP sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/auth/verify-otp:
+    post:
+      tags: [Auth]
+      summary: Verify OTP and get tokens
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                otpRefId:
+                  type: string
+                otp:
+                  type: string
+      responses:
+        '200':
+          description: OTP verified
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/auth/refresh-token:
+    post:
+      tags: [Auth]
+      summary: Refresh access token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refreshToken:
+                  type: string
+      responses:
+        '200':
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/auth/logout:
+    post:
+      tags: [Auth]
+      summary: Logout user
+      responses:
+        '200':
+          description: Logged out
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/auth/me:
+    get:
+      tags: [Auth]
+      summary: Get user profile
+      responses:
+        '200':
+          description: Profile fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/auth/profile:
+    put:
+      tags: [Auth]
+      summary: Update user profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Profile updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Inventory APIs
+  /api/v1/inventory/{productId}:
+    get:
+      tags: [Inventory]
+      summary: Get inventory for product
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Inventory fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    put:
+      tags: [Inventory]
+      summary: Update inventory (Admin)
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Inventory updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/inventory/bulk:
+    get:
+      tags: [Inventory]
+      summary: Get inventory for multiple products
+      parameters:
+        - name: productIds
+          in: query
+          schema:
+            type: string
+            example: "101,102,103"
+      responses:
+        '200':
+          description: Bulk inventory fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/inventory/reserve:
+    post:
+      tags: [Inventory]
+      summary: Reserve stock
+      responses:
+        '200':
+          description: Stock reserved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/inventory/release:
+    post:
+      tags: [Inventory]
+      summary: Release stock
+      responses:
+        '200':
+          description: Stock released
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/inventory/confirm:
+    post:
+      tags: [Inventory]
+      summary: Confirm stock
+      responses:
+        '200':
+          description: Stock confirmed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/inventory/adjust:
+    post:
+      tags: [Inventory]
+      summary: Adjust inventory (Admin)
+      responses:
+        '200':
+          description: Inventory adjusted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/inventory/low-stock:
+    get:
+      tags: [Inventory]
+      summary: Get low stock products
+      responses:
+        '200':
+          description: Low stock products fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Address APIs
+  /api/v1/addresses:
+    get:
+      tags: [Address]
+      summary: Get user addresses
+      responses:
+        '200':
+          description: Addresses fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    post:
+      tags: [Address]
+      summary: Add address
+      responses:
+        '201':
+          description: Address added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/addresses/{addressId}:
+    put:
+      tags: [Address]
+      summary: Update address
+      parameters:
+        - name: addressId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Address updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+    delete:
+      tags: [Address]
+      summary: Delete address
+      parameters:
+        - name: addressId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Address deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/addresses/{addressId}/default:
+    put:
+      tags: [Address]
+      summary: Set default address
+      parameters:
+        - name: addressId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Default updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/addresses/validate:
+    post:
+      tags: [Address]
+      summary: Validate address
+      responses:
+        '200':
+          description: Address validated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Notifications APIs
+  /api/v1/notifications/sms:
+    post:
+      tags: [Notification]
+      summary: Send SMS
+      responses:
+        '200':
+          description: SMS sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/notifications/email:
+    post:
+      tags: [Notification]
+      summary: Send Email
+      responses:
+        '200':
+          description: Email sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/notifications/push:
+    post:
+      tags: [Notification]
+      summary: Send Push
+      responses:
+        '200':
+          description: Push sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/notifications:
+    get:
+      tags: [Notification]
+      summary: Get notifications
+      responses:
+        '200':
+          description: Notifications fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/notifications/{notificationId}/read:
+    put:
+      tags: [Notification]
+      summary: Mark as read
+      parameters:
+        - name: notificationId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Marked as read
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Coupons APIs
+  /api/v1/coupons/apply:
+    post:
+      tags: [Coupon]
+      summary: Apply coupon
+      responses:
+        '200':
+          description: Coupon applied
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  /api/v1/coupons/available:
+    get:
+      tags: [Coupon]
+      summary: Get available coupons
+      responses:
+        '200':
+          description: Coupons fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Reviews APIs
+  /api/v1/reviews:
+    post:
+      tags: [Review]
+      summary: Submit review
+      responses:
+        '201':
+          description: Review submitted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Admin APIs
+  /api/v1/admin/dashboard/summary:
+    get:
+      tags: [Admin]
+      summary: Dashboard summary
+      responses:
+        '200':
+          description: Summary fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Analytics APIs
+  /api/v1/analytics/overview:
+    get:
+      tags: [Analytics]
+      summary: Business overview
+      responses:
+        '200':
+          description: Overview fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+  # Ops APIs
+  /api/v1/ops/orders/funnel:
+    get:
+      tags: [Operations]
+      summary: Order funnel
+      responses:
+        '200':
+          description: Funnel fetched
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+components:
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        message:
+          type: string
+          example: "Operation successful"
+        data:
+          type: object

@@ -1,77 +1,49 @@
-# Mock REST API Server
+# Apna Dukan Mock API Server
 
-A lightweight mock REST API server built with Node.js and Express.js, designed to serve static JSON responses. Perfect for frontend development, testing, and Flutter app development.
+A comprehensive mock REST API server for the "Apna Dukan" e-commerce application, built with Node.js and Express.js. Designed to serve static JSON responses for frontend development and testing.
 
-## Features
+## 🚀 Features
 
-- ✅ Express.js based REST API
-- ✅ CORS enabled for browser and mobile apps
-- ✅ Static JSON file responses (no database)
-- ✅ Clean, scalable code structure
-- ✅ Production-ready folder organization
-- ✅ Ready for Render deployment
+- ✅ **Express.js** based REST API
+- ✅ **Swagger UI** - Interactive API documentation and testing
+- ✅ **CORS** enabled for browser and mobile apps
+- ✅ **80+ API Endpoints** across 10 major domains
+- ✅ **Zero Database** - Static JSON file responses
+- ✅ Clean, domain-based folder organization
+- ✅ Ready for Render/Heroku deployment
 
-## Project Structure
+## 📖 API Documentation (Swagger UI)
+
+The server includes interactive Swagger documentation where you can view all endpoints and test them directly from your browser.
+
+**URL**: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+
+### How to use Swagger UI:
+1. Start the server: `npm start`
+2. Open `http://localhost:3000/api-docs` in your browser.
+3. Explore the controllers (Payment, Auth, Inventory, etc.).
+4. Click "Try it out" to send requests and see real mock responses.
+
+## 📁 Project Structure
 
 ```
 mock-server/
  ├── src/
- │   ├── app.js                     # Express bootstrap
- │   ├── routes/
- │   │   └── routes.js               # ALL API ROUTES HERE
- │   └── responses/
- │       ├── products/
- │       │   ├── list.json
- │       │   └── detail.json
- │       ├── auth/
- │       │   └── login.json
- │       └── cart/
- │           └── get.json
- ├── package.json
- └── README.md
+ │   ├── app.js                   # Main application setup & Swagger config
+ │   ├── routes/                  # Express route definitions
+ │   └── responses/               # Static JSON mock responses
+ ├── swagger.yaml                 # OpenAPI Specification
+ ├── package.json                 # Dependencies & scripts
+ └── README.md                    # Documentation
 ```
 
-## API Endpoints
-
-### Products
-
-- **GET** `/api/products` - Get list of products
-- **GET** `/api/products/:id` - Get product details by ID
-
-### Authentication
-
-- **POST** `/api/auth/login` - User login
-
-### Cart
-
-- **GET** `/api/cart` - Get user's cart
-
-### Health Check
-
-- **GET** `/health` - Server health check
-
-## Response Format
-
-All API responses follow this structure:
-
-```json
-{
-  "success": true,
-  "message": "Optional message",
-  "data": { ... },
-  "timestamp": "2024-01-15T10:30:00Z"
-}
-```
-
-## Local Development
+## 🛠️ Local Development
 
 ### Prerequisites
-
 - Node.js (v14 or higher)
-- npm or yarn
+- npm
 
 ### Installation
-
 1. Install dependencies:
 ```bash
 npm install
@@ -82,115 +54,32 @@ npm install
 npm start
 ```
 
-The server will start on `http://localhost:3000` by default.
+## 🧪 Testing Endpoints
 
-### Testing Endpoints
-
-You can test the endpoints using curl, Postman, or any HTTP client:
+You can also test endpoints using curl or Postman:
 
 ```bash
-# Get products list
-curl http://localhost:3000/api/products
+# Get payment history
+curl http://localhost:3000/api/v1/payments/history
 
-# Get product details
-curl http://localhost:3000/api/products/1
-
-# Login
-curl -X POST http://localhost:3000/api/auth/login \
+# Login with mobile (returns OTP ref)
+curl -X POST http://localhost:3000/api/v1/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"user@example.com","password":"password"}'
-
-# Get cart
-curl http://localhost:3000/api/cart
-
-# Health check
-curl http://localhost:3000/health
+  -d '{"mobileNumber":"9999999999"}'
 ```
 
-## Deployment on Render
+## 📡 Available Domains
 
-### Step 1: Prepare Your Repository
+1. **Payment** (`/api/v1/payments`)
+2. **Auth** (`/api/v1/auth`)
+3. **Inventory** (`/api/v1/inventory`)
+4. **Address** (`/api/v1/addresses`)
+5. **Notification** (`/api/v1/notifications`)
+6. **Coupon** (`/api/v1/coupons`)
+7. **Review** (`/api/v1/reviews`)
+8. **Admin** (`/api/v1/admin`)
+9. **Analytics** (`/api/v1/analytics`)
+10. **Operations** (`/api/v1/ops`)
 
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-
-### Step 2: Create Render Service
-
-1. Go to [Render Dashboard](https://dashboard.render.com/)
-2. Click **"New +"** → **"Web Service"**
-3. Connect your repository
-4. Configure the service:
-   - **Name**: `mock-rest-api-server` (or your preferred name)
-   - **Environment**: `Node`
-   - **Build Command**: `npm install`
-   - **Start Command**: `npm start`
-   - **Plan**: Select **Free** tier
-
-### Step 3: Environment Variables (Optional)
-
-If you need to customize the port, you can add:
-- **Key**: `PORT`
-- **Value**: `10000` (or any port Render assigns)
-
-Render automatically sets the `PORT` environment variable, so no manual configuration is needed.
-
-### Step 4: Deploy
-
-1. Click **"Create Web Service"**
-2. Render will automatically:
-   - Install dependencies
-   - Start your server
-   - Provide a public URL (e.g., `https://your-app.onrender.com`)
-
-### Step 5: Access Your API
-
-Once deployed, your API will be available at:
-```
-https://your-app.onrender.com/api/products
-https://your-app.onrender.com/api/products/1
-https://your-app.onrender.com/api/auth/login
-https://your-app.onrender.com/api/cart
-```
-
-## Customizing Responses
-
-To modify API responses, simply edit the corresponding JSON files in `src/responses/`:
-
-- Products list: `src/responses/products/list.json`
-- Product details: `src/responses/products/detail.json`
-- Login response: `src/responses/auth/login.json`
-- Cart response: `src/responses/cart/get.json`
-
-## Adding New Endpoints
-
-1. Add a new route in `src/routes/routes.js`:
-```javascript
-router.get('/your-endpoint', (req, res) => {
-  const filePath = path.join(responsesPath, 'your-folder', 'response.json');
-  res.sendFile(filePath, (err) => {
-    if (err) {
-      res.status(500).json({
-        success: false,
-        message: 'Error loading data',
-        error: err.message
-      });
-    }
-  });
-});
-```
-
-2. Create the corresponding JSON file in `src/responses/your-folder/response.json`
-
-3. Follow the standard response format with `success`, `message`, `data`, and `timestamp`
-
-## Notes
-
-- The server uses CORS middleware to allow cross-origin requests
-- All routes are defined in a single file (`routes.js`) for easy maintenance
-- No database is used - all responses come from static JSON files
-- The server automatically uses `process.env.PORT` for Render compatibility
-
-## License
-
+## 📝 License
 MIT
-
-

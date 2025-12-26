@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
 const routes = require('./routes/routes');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
@@ -17,6 +19,9 @@ const analyticsRoutes = require('./routes/analyticsRoutes');
 const opsRoutes = require('./routes/opsRoutes');
 const path = require('path');
 
+// Load Swagger document
+const swaggerDocument = YAML.load(path.join(__dirname, '..', 'swagger.yaml'));
+
 const app = express();
 
 // Enable CORS for all origins (browser apps and Flutter apps)
@@ -24,6 +29,9 @@ app.use(cors());
 
 // Parse JSON request bodies
 app.use(express.json());
+
+// Swagger API Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Register API routes
 app.use('/api', routes);
